@@ -17,7 +17,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
+  font-family: 'Open Sans', sans-serif;
 }
 /* -------- */
 
@@ -49,9 +50,12 @@ button {
   border-radius: 5px;
   padding: 10px 15px;
   border: none;
+  cursor: pointer;
 }
 
 /* -------- */
+
+/****** hero  ******/
 
 .hero-wrapper {
   margin: 0;
@@ -59,9 +63,8 @@ button {
   color: white;
   display: grid;
   place-items: center;
-  height: 100vh;
   padding: 10%;
-  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
 }
 .hero-content {
   display: flex;
@@ -127,4 +130,215 @@ button {
   left: 60%;
   z-index: 2;
   transform: translate(-40%, -15%);
+}
+
+/* ------------- */
+
+/******* Content Page ********/
+
+.header {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 3;
+}
+.header-wrapper {
+  width: 95%;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-links {
+  letter-spacing: 0.5px;
+  display: flex;
+  gap: 20px;
+}
+
+/* ----------- */
+
+/*****  main-content *****/
+
+.main-content {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding: 2%;
+}
+
+.main-content-subHeading {
+  line-height: 40px;
+  margin-bottom: 30px;
+}
+
+.primary-button {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 6px solid #d9edff;
+  margin-bottom: 30px;
+}
+.content-hr-line {
+  margin: auto;
+  width: 40%;
+  height: 10px;
+  background-color: #111111;
+}
+
+/* Story Section */
+
+.story-section {
+  padding: 50px 0px;
+  /* display: flex; */
+}
+
+.story-list-wrapper {
+  flex: 1;
+  width: 470px;
+  max-width: 50%;
+  background-color: #ededed;
+  padding: 15px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.story-list {
+  list-style: none;
+  width: 100%;
+  text-align: left;
+  color: white;
+  margin: auto;
+  padding: 0;
+}
+.story-list li {
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.story-list li:last-child {
+  margin-bottom: 0;
+}
+.story-list .blue {
+  background-color: var(--primary-color);
+}
+.story-list .yellow {
+  background-color: var(--secondary-color);
+  color: var(--dark-black);
+}
+.story-list .dragged {
+  position: relative;
+  left: 10%;
+  top: -10%;
+  -webkit-transform: rotate(8deg);
+  transform: rotate(8deg);
+}
+.hand-image {
+  position: absolute;
+  right: 40%;
+  bottom: -20%;
+}
+.story-list .red {
+  background-color: red;
+}
+.story-list .pink {
+  background-color: #ffacf8;
+}
+.story-list .tomato {
+  background-color: #f98071;
+}
+
+.story-text {
+  flex: 1;
+  text-align: left;
+  padding: 0px 15px;
+}
+
+.story-text p {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.footer-gang-img {
+  width: 60%;
+  margin: auto;
+  padding: 40px 0;
+}
+.footer-text {
+  color: #a0a0a0;
+}
+
+/* ----- */
+
+/* ------- popover ------ */
+.pop-up-wrapper {
+  display: none;
+  z-index: 4;
+  position: fixed;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.pop-up-show {
+  display: grid;
+  place-items: center;
+}
+.pop-up-hide {
+  display: none;
+}
+.pop-up {
+  width: 80%;
+  margin: auto;
+  background-color: #fefefe;
+  text-align: center;
+  position: relative;
+}
+
+.close-img-wrapper {
+  background-color: red;
+  width: auto;
+  position: absolute;
+  padding: 5px 8px;
+  border-radius: 50%;
+  right: 0;
+  top: 0;
+  transform: translate(50%, -50%);
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 15px;
+}
+.input-item label {
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.input-item input {
+  border: 2px solid var(--dark-black);
+  width: 50%;
+  width: 400px;
+  height: 50px;
 }

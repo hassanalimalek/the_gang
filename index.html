@@ -40,5 +40,128 @@
         </div>
       </div>
     </div>
+    <!-- content-header -->
+    <div class="header">
+      <div class="header-wrapper">
+        <div class="header-logo-wrapper">
+          <img src="./assets/logo.png" width="160px" />
+        </div>
+        <div class="header-links">
+          <h4>More Info</h4>
+          <h4>The Story</h4>
+          <h4>Sign Up</h4>
+        </div>
+      </div>
+    </div>
+    <!-- main content -->
+    <div class="main-content">
+      <h1 class="main-content-heading">Join our fan club</h1>
+      <h3 class="main-content-subHeading">
+        Every week we have a party. If you want to join us then join our fan
+        club. Members will also receive pictures of us in all kinds of shapes
+        and sizes. Cool huh?
+      </h3>
+      <button class="primary-button" id="modal-open-btn">Sign Me Up!</button>
+      <hr class="content-hr-line" />
+      <div class="story-section">
+        <div class="story-list-wrapper">
+          <ul class="story-list">
+            <li class="blue">Rock and Roll</li>
+            <li class="yellow dragged">
+              Laughter
+              <img class="hand-image" width="30px" src="./assets/hand.png" />
+            </li>
+            <li class="red">Square Offs</li>
+            <li class="pink">Circuitous Routes</li>
+            <li class="tomato">Trignometry</li>
+            <li class="blue">Rad Hats</li>
+            <li class="yellow">Being Silly</li>
+          </ul>
+        </div>
+        <div class="story-text">
+          <h2 style="margin-top: 0">
+            Left : Things We Find Important
+            <br />
+            Below : Our Story
+          </h2>
+
+          <p>
+            Once upon a time there was a group of shapes. They were mostly black
+            and rectangular. They were mean and very serious.
+            <br />
+            <br />
+            And so they kicked the 3 shapes that didn’t conform out of their
+            gang, which was called the Right Angled Gang.
+            <br />
+            <br />
+            And so these 3 shapes were
+            <br />
+            very sad, but found great joy and comfort being around each other.
+            They soon started having a lot of fun, started rocking and rolling,
+            started being silly, and became the most well-known shape gang in
+            the universe.
+            <br />
+            <br />
+            They even started making fun of squares and rectangles in what they
+            like to call ‘Square Offs’!
+          </p>
+        </div>
+      </div>
+      <hr class="content-hr-line" />
+      <img src="./assets/gang.png" class="footer-gang-img" />
+      <p class="footer-text">Made by Hassan from TuringTech</p>
+    </div>
+    <!-- pop up -->
+    <div class="pop-up-wrapper" id="popup-modal">
+      <div class="pop-up">
+        <div class="close-img-wrapper" id="modal-close-btn">
+          <img width="15px" class="close-img" src="./assets/close.png" />
+        </div>
+        <h1>Fill In Your Details</h1>
+        <form>
+          <div style="margin-bottom: 30px">
+            <div class="input-row">
+              <div class="input-item">
+                <label for="firstName">Your First Name</label>
+                <input name="firstName" placeholder="John" />
+              </div>
+              <div class="input-item">
+                <label for="lastName">Your Last Name</label>
+                <input name="lastName" placeholder="Doe" />
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input-item">
+                <label for="color">Your Favorite Color</label>
+                <input name="color" placeholder="Red" />
+              </div>
+              <div class="input-item">
+                <label for="favFood">Your Favorite Food</label>
+                <input name="favFood" placeholder="Apple Pie" />
+              </div>
+            </div>
+          </div>
+          <button class="primary-button">I Want In!</button>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript">
+      // Get the modal
+      var modal = document.getElementById('popup-modal');
+
+      // Get the button that opens the modal
+      var modalOpenBtn = document.getElementById('modal-open-btn');
+      var modalCloseBtn = document.getElementById('modal-close-btn');
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName('close')[0];
+
+      // When the user clicks on the button, open the modal
+      function popUpToggle() {
+        modal.classList.toggle('pop-up-show');
+      }
+      modalOpenBtn.onclick = popUpToggle;
+      modalCloseBtn.onclick = popUpToggle;
+    </script>
   </body>
 </html>
